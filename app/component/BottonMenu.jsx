@@ -1,8 +1,8 @@
-// components/BottomMenu.jsx
+
 import { useRouter } from 'expo-router';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-export default function BottomMenu() {
+export default function BottonMenu() {
   const router = useRouter();
 
   return (
@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    position: 'absolute',
     bottom: 0
   },
   menuText: {
