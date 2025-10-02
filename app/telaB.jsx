@@ -2,12 +2,12 @@ import React from 'react';
 import { FlatList, Image, StyleSheet, Text, View } from 'react-native';
 
 const contatos = [
-  { id: '1', nome: 'Alex', telefone: '31 99112-0001', avatar: 'https://i.pravatar.cc/150?img=1' },
-  { id: '2', nome: 'Bruno', telefone: '31 99812-0002', avatar: 'https://i.pravatar.cc/150?img=2' },
-  { id: '3', nome: 'Thiago', telefone: '31 91515-0003', avatar: 'https://i.pravatar.cc/150?img=3' },
-  { id: '4', nome: 'Diego', telefone: '31 99251-0004', avatar: 'https://i.pravatar.cc/150?img=4' },
-  { id: '5', nome: 'Elisa', telefone: '31 99008-0005', avatar: 'https://i.pravatar.cc/150?img=5' },
-  { id: '6', nome: 'Felipe', telefone: '31 91819-0006', avatar: 'https://i.pravatar.cc/150?img=6' },
+  { id: '1', nome: 'Alex Nazarro', telefone: '31 99112-0001', avatar: 'https://i.pravatar.cc/150?img=1' },
+  { id: '2', nome: 'Ricardo Deones', telefone: '31 99812-0002', avatar: 'https://i.pravatar.cc/150?img=2' },
+  { id: '3', nome: 'Thiago Deones', telefone: '31 91515-0003', avatar: 'https://i.pravatar.cc/150?img=3' },
+  { id: '4', nome: 'Diego Castro', telefone: '31 99251-0004', avatar: 'https://i.pravatar.cc/150?img=4' },
+  { id: '5', nome: 'Elisa Samudio', telefone: '31 99008-0005', avatar: 'https://i.pravatar.cc/150?img=5' },
+  { id: '6', nome: 'Felipe Eduardo', telefone: '31 91819-0006', avatar: 'https://i.pravatar.cc/150?img=6' },
 ];
 
 export default function TelaB() {
