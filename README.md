@@ -32,7 +32,7 @@ JavaScript (ES6+)
 
 📁 Estrutura do Projeto
 
-/
+```
 ├── app/
 │   ├── _layout.tsx       → Layout global (Top Menu + Slot + Bottom Menu)
 │   ├── index.jsx         → Tela inicial
@@ -44,6 +44,7 @@ JavaScript (ES6+)
 │   └── topmenu.jsx       → Menu superior com dropdown
 │
 └── README.md
+```
 
 ---
 
