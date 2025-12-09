@@ -1,50 +1,217 @@
-# Welcome to your Expo app 👋
+# 📱 Meu App — Navegação com Expo Router e React Native Paper #
 
-Esse é um projeto [Expo](https://expo.dev) criado com [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este projeto é um aplicativo simples desenvolvido com Expo, React Native e React Native Paper, usando Expo Router para navegação entre telas.
 
-## Vamos começar
+O objetivo é demonstrar:
 
-1. Install dependencies
+Uso de layout global
 
-   ```bash
-   npm install
-   ```
+Integração com menus superior e inferior
 
-2. Start the app
+Navegação entre páginas
 
-   ```bash
-   npx expo start
-   ```
+Renderização de lista com FlatList
 
-In the output, you'll find options to open the app in a
+Uso de componentes do React Native Paper
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+🚀 Tecnologias Utilizadas
 
-## Get a fresh project
+Expo
 
-When you're ready, run:
+Expo Router
 
-```bash
-npm run reset-project
+React Native
+
+React Native Paper
+
+JavaScript (ES6+)
+
+---
+
+📁 Estrutura do Projeto
+
+/
+├── app/
+│   ├── _layout.tsx       → Layout global (Top Menu + Slot + Bottom Menu)
+│   ├── index.jsx         → Tela inicial
+│   ├── telaA.jsx         → Tela A (simples)
+│   ├── telaB.jsx         → Lista de contatos
+│
+├── component/
+│   ├── BottonMenu.jsx    → Menu inferior fixo
+│   └── topmenu.jsx       → Menu superior com dropdown
+│
+└── README.md
+
+---
+
+🧩 Explicando Cada Arquivo
+
+1. _layout.tsx — Estrutura base do app
+
+Este arquivo é carregado automaticamente pelo Expo Router e envolve todas as telas.
+
+Ele contém:
+
+TopDropMenu → menu superior
+
+Slot → onde cada página é carregada
+
+BottomMenu → menu inferior
+
+PaperProvider → habilita os componentes do React Native Paper
+
+```
+<PaperProvider>
+  <View style={styles.container}>
+    <TopDropMenu />
+    <Slot />
+    <BottomMenu />
+  </View>
+</PaperProvider>
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+📌 Atenção:
+Se o layout quebrar, provavelmente o erro está na importação do BottomMenu ou no uso incorreto do Slot.
 
-To learn more about developing your project with Expo, look at the following resources:
+2. index.jsx — Tela Inicial
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Tela simples exibindo apenas um texto:
 
-## Join the community
+<Text>Essa é a tela do Index inicial.</Text>
 
-Join our community of developers creating universal apps.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+É a tela carregada quando o app abre.
+
+3. telaA.jsx — Tela A
+
+Estrutura idêntica à tela inicial, mudando apenas o texto.
+
+<Text>Essa é a Tela A.</Text>
+
+4. telaB.jsx — Lista de Contatos
+
+Aqui temos:
+
+FlatList
+
+Renderização de cartões
+
+Alternância de cores entre os cards
+
+Avatares via URL
+
+Cada item contém:
+
+Foto
+
+Nome
+
+Telefone
+
+---
+
+📌 Atenção importante
+
+A propriedade avatar usa imagens de internet.
+→ Certifique-se de estar com internet ativa ao testar.
+
+A imagem do avatar está com tamanho 18x18, o que pode parecer pequeno.
+Se quiser deixar maior, ajuste o estilo.
+
+5. topmenu.jsx — Menu Superior Dropdown
+
+Usa:
+
+<Appbar.Header />
+
+<Menu />
+
+router.push() para navegação
+
+<Menu.Item onPress={() => router.push('/telaA')} title="Tela A" />
+
+---
+
+📌 Cuidados
+
+Caso o menu não abra, verifique se o estado visible está sendo atualizado.
+
+Caso a navegação falhe, revise os caminhos das rotas (/telaA, /telaB, /).
+
+📌 Pontos de Atenção Geral
+
+1. Navegação com router.push()
+
+Os caminhos precisam existir no diretório:
+
+```
+/app/telaA.jsx
+/app/telaB.jsx
+/app/index.jsx
+```
+
+
+2. Layout com menus fixos
+
+O BottomMenu ocupa espaço extra.
+Por isso, em telaB.jsx foi usado:
+
+```
+paddingBottom: 70
+```
+
+Sem isso, a lista ficaria escondida atrás do menu inferior.
+
+3. Importações
+
+Se ocorrer erro como "Component not found", revise:
+
+Caminhos relativos
+
+Extensões .jsx
+
+Exportações default
+
+4. React Native Paper
+
+O app deve estar envolvido em:
+
+<PaperProvider>
+
+Caso contrário, os componentes não vão renderizar.
+
+---
+
+▶️ Como Rodar o Projeto
+
+```
+npm install
+npm start
+```
+
+Ou:
+
+```
+npx expo start
+```
+
+Use o QR Code para abrir no Expo Go.
+
+---
+
+📘 Próximos Passos (Sugestões)
+
+Implementar tema claro/escuro
+
+Melhorar o avatar da lista
+
+Criar rotas dinâmicas (ex.: contato detalhado)
+
+Adicionar ícones no BottomMenu
+
+Ajustar responsividade
