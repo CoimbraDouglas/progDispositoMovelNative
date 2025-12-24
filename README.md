@@ -1,6 +1,6 @@
 # 📱 Meu App — Navegação com Expo Router e React Native Paper #
 
-Este projeto é um aplicativo simples desenvolvido com Expo, React Native e React Native Paper, usando Expo Router para navegação entre telas.
+Este projeto é um aplicativo simples desenvolvido com `Expo`, `React Native` e `React Native Paper`, usando `Expo Router` para navegação entre telas.
 
 O objetivo é demonstrar:
 
@@ -16,7 +16,7 @@ Uso de componentes do React Native Paper
 
 ---
 
-🚀 Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
 
 Expo
 
@@ -30,7 +30,7 @@ JavaScript (ES6+)
 
 ---
 
-📁 Estrutura do Projeto
+## 📁 Estrutura do Projeto
 
 ```
 ├── app/
@@ -48,7 +48,7 @@ JavaScript (ES6+)
 
 ---
 
-🧩 Explicando Cada Arquivo
+## 🧩 Explicando Cada Arquivo
 
 1. _layout.tsx — Estrutura base do app
 
@@ -76,7 +76,7 @@ PaperProvider → habilita os componentes do React Native Paper
 
 ---
 
-📌 Atenção:
+## 📌 Atenção:
 Se o layout quebrar, provavelmente o erro está na importação do BottomMenu ou no uso incorreto do Slot.
 
 2. index.jsx — Tela Inicial
@@ -116,7 +116,7 @@ Telefone
 
 ---
 
-📌 Atenção importante
+## 📌 Atenção importante
 
 A propriedade avatar usa imagens de internet.
 → Certifique-se de estar com internet ativa ao testar.
@@ -138,13 +138,13 @@ router.push() para navegação
 
 ---
 
-📌 Cuidados
+## 📌 Cuidados
 
 Caso o menu não abra, verifique se o estado visible está sendo atualizado.
 
 Caso a navegação falhe, revise os caminhos das rotas (/telaA, /telaB, /).
 
-📌 Pontos de Atenção Geral
+## 📌 Pontos de Atenção Geral
 
 1. Navegação com router.push()
 
@@ -188,7 +188,7 @@ Caso contrário, os componentes não vão renderizar.
 
 ---
 
-▶️ Como Rodar o Projeto
+## ▶️ Como Rodar o Projeto
 
 ```
 npm install
@@ -205,7 +205,7 @@ Use o QR Code para abrir no Expo Go.
 
 ---
 
-📘 Próximos Passos (Sugestões)
+## 📘 Próximos Passos (Sugestões)
 
 Implementar tema claro/escuro
 
